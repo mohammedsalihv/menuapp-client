@@ -15,7 +15,8 @@ const Menu = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          "http://localhost:5000/api/menu-manager/menu/menulist"
+          "https://menuapp-server.onrender.com/api/menu-manager/menu/menulist"
+          
         );
         const data = await response.json();
 
@@ -36,7 +37,7 @@ const Menu = () => {
       try {
         setLoading(true);
         const response = await fetch(
-          `http://localhost:5000/api/menu-manager/item/items?menuName=${activeTab}`
+          `https://menuapp-server.onrender.com/api/menu-manager/item/items?menuName=${activeTab}`
         );
 
         if (!response.ok) {
