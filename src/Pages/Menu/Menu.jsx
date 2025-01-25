@@ -60,7 +60,12 @@ const Menu = () => {
   }, [activeTab]);
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div  style={{
+          textAlign: "center",
+          margin: "10%",
+          color: "red",
+          fontWeight: "bold",
+        }}>Loading...</div>;
   }
 
   if (error) {
