@@ -1,0 +1,99 @@
+header {
+	display: flex;
+	align-items: right;
+	justify-content: space-between;
+	height: 80px;
+	padding: 0 2rem;
+	background-color: var(--mainColor);
+	color: white;
+}
+
+header h3 {
+	margin-top: 4%;
+}
+
+nav a {
+	margin: 0 1rem;
+	color: white;
+	text-decoration: none;
+	display: flex;
+	justify-content: flex-end;
+}
+
+nav a:hover {
+	color: #033d7c;
+}
+
+header .nav-btn {
+	padding: 10px;
+	cursor: pointer;
+	background: transparent;
+	border: none;
+	outline: none;
+	color: white;
+	visibility: hidden;
+	opacity: 0;
+	font-size: 1.8rem;
+}
+
+nav {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+
+header div,
+nav {
+	display: flex;
+	align-items: flex-end;
+}
+
+@media only screen and (max-width: 1024px) {
+	header .nav-btn {
+		visibility: visible;
+		opacity: 1;
+		color: white;
+	}
+
+	header h3 {
+		margin-top: 8%;
+	}
+
+	header nav {
+		position: fixed;
+		top: -100vh;
+		left: 0;
+		height: 100%;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		gap: 1.5rem;
+		background-color: white;
+		transition: 1s;
+		color: black;
+
+	}
+
+	header .responsive_nav {
+		transform: translateY(100vh);
+	}
+
+	nav .nav-close-btn {
+		position: absolute;
+		top: 2rem;
+		right: 2rem;
+		color: black;
+	}
+
+	nav a {
+		font-size: 1.5rem;
+		color: black;
+	}
+
+	nav a:hover {
+		color: #033d7c;
+	}
+
+}

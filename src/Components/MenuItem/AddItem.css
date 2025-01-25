@@ -1,0 +1,130 @@
+.add-item-form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  background-color: #1c1c1c;
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin-top: 4%;
+
+}
+
+.add-item-form-container h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  color: #f4f4f4;
+}
+
+.success-message {
+  color: #0a6bd2;
+  font-size: 1rem;
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.add-item-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  color: #bbb;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #888;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #033d7c;
+}
+
+.menu-select {
+  padding: 0.8rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #2c2c2c;
+  color: white;
+  appearance: none;
+}
+
+.menu-select:focus {
+  outline: none;
+  border-color: #033d7c;
+}
+
+.menu-select option {
+  background-color: #2c2c2c;
+  color: white;
+}
+
+.menu-select::placeholder {
+  color: #888;
+}
+
+
+.submit-button {
+  padding: 0.8rem;
+  font-size: 1rem;
+  background-color: #033d7c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #004fa4;
+}
+
+
+
+@media (max-width: 768px) {
+  .add-item-form-container {
+    padding: 1rem;
+    margin-top: 30%;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 450px) {
+  .add-item-form-container {
+    padding: 1rem;
+    margin-top: 30%;
+    max-width: 300px;
+  }
+
+  .submit-button {
+    font-size: 0.9rem;
+  }
+}
+  
