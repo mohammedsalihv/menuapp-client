@@ -12,7 +12,7 @@ const AddItem = () => {
   const [submitted, setSubmitted] = useState(false);
 
   useEffect(() => {
-    const getMenuApi = "http://localhost:5000/api/menu-manager/menu/menulist";
+    const getMenuApi = "https://menuapp-server.onrender.com/api/menu-manager/menu/menulist";
 
     const fetchMenuList = async () => {
       try {
@@ -49,7 +49,7 @@ const AddItem = () => {
 
     try {
       const response = await fetch(
-        "http://localhost:5000/api/menu-manager/item/add-item",
+        "https://menuapp-server.onrender.com/api/menu-manager/item/add-item",
         {
           method: "POST",
           headers: {
