@@ -13,7 +13,7 @@ const AddMenu = () => {
     e.preventDefault();
     try {
       const response = await fetch(
-        "http://localhost:5000/api/menu-manager/menu/add-menu",
+        "https://menuapp-server.onrender.com/api/menu-manager/menu/add-menu",
         {
           method: "POST",
           headers: {
