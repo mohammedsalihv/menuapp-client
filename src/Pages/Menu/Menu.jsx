@@ -4,7 +4,7 @@ import { CgAddR } from "react-icons/cg";
 import "./Menu.css";
 
 const Menu = () => {
-  const [activeTab, setActiveTab] = useState("Drinks");
+  const [activeTab, setActiveTab] = useState("coffe");
   const [menuItems, setMenuItems] = useState([]);
   const [categoryItems, setCategoryItems] = useState([]);
   const [loading, setLoading] = useState(true);
