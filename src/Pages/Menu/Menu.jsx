@@ -32,7 +32,32 @@ const Menu = () => {
     fetchMenuData();
   }, []);
 
+  useEffect(() => {
+    const fetchCategoryItems = async () => {
+      try {
+        setLoading(true);
+        const response = await fetch(
+          `https://menuapp-server.onrender.com/api/menu-manager/item/items?menuName=${activeTab}`
+        );
 
+        if (!response.ok) {
+          throw new Error("Failed to fetch items");
+        }
+
+        const data = await response.json();
+        setCategoryItems(data);
+        setLoading(false);
+      } catch (err) {
+        console.error("Error fetching category items:", err);
+        setError("Failed to fetch");
+        setLoading(false);
+      }
+    };
+
+    if (activeTab) {
+      fetchCategoryItems();
+    }
+  }, [activeTab]);
 
   if (loading) {
     return <div  style={{
